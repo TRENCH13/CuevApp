@@ -1,137 +1,245 @@
 /* Estilos CSS */
-  body, html {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    font-family: 'Nunito', sans-serif;
-  }
-  .background-image {
-    background-image: url('../PNG/index1.png');
-    background-size: cover;
-    background-position: center;
-    height: 100%;
-  }
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Roboto', sans-serif;
+  color: white;
+}
+
+.background-image {
+  background-image: url('../PNG/index1.png');
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+  background-repeat: no-repeat;
+}
+
+.menu-bar {
+  background: #fff;
+  height: 1.5cm;
+  display: flex;
+  align-items: center;
+  padding: 0 1cm;
+  z-index: 3;
+}
+
+.menu-icon {
+  background: url('../PNG/menu-icon.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 1.5rem;
+  height: 1.5rem;
+  cursor: pointer;
+  margin: center;
+}
+
+.menu-icon:hover {
+  background-color: #25B354;
+}
+
+.cuevapp-title {
+  color: #25B354;
+  font-family: 'Lobster', cursive;
+  font-size: 40px;
+  margin-left: 1rem;
+}
+
+.separator1 {
+  margin: 0 1cm;
+  border-left: 1px solid #000;
+  height: 50%;
+}
+
+.separator2 {
+  margin: 0 1cm;
+  border-left: 1px solid #000;
+  height: 50%;
+}
+
+.separator3 {
+  margin: 0 1cm;
+  border-left: 1px solid #000;
+  height: 50%;
+}
+
+.separator4 {
+  margin: 0 1cm;
+  border-left: 1px solid #000;
+  height: 50%;
+}
+
+.search-bar {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  background-color: #ECECEC;
+  border-radius: 10px;
+  padding: 0 20px;
+}
+
+.search-bar input {
+  border: none;
+  background: transparent;
+  color: #AEAEAE;
+  font-size: 16px;
+}
+
+.search-bar input::placeholder {
+  color: #929292;
+}
+
+.search-bar input:focus {
+  outline: none;
+}
+
+.search-icon {
+  cursor: pointer;
+  margin-left: auto;
+}
+
+.search-icon:hover {
+  color: #25B354;
+}
+
+.login-text {
+  color: #25B354;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 16px;
+  text-align: center;
+  margin: center;
+}
+
+.cart-icon {
+  cursor: pointer;
+  margin: center;
+}
+
+.main-content {
+  text-align: left;
+  color: #000;
+  font-family: 'Nunito ExtraLight', cursive;
+  padding: 2rem;
+  margin-top: 5rem;
+}
+
+.main-content button {
+  background-color: #2D2D2D;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.location-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  padding: 5px;
+}
+
+.location-icon {
+  margin-right: 5px;
+}
+
+.location-label {
+  font-weight: bold;
+  font-size: 16px;
+  color: #25B354;
+}
+
+/* Estilos responsivos */
+@media only screen and (min-width: 601px) {
   .menu-bar {
-    background: #fff;
-    height: 1.5cm;
-    display: flex;
-    align-items: center;
-    padding: 0 1cm;
-  }
-  .menu-icon {
-    background: url('../PNG/menu-icon.png');
-    width: 10px;
-    height: 10px;
-    cursor: pointer;
-  }
-  .menu-icon:hover {
-    background-color: #25B354;
-  }
-  .cuevapp-title {
-    color: #25B354;
-    font-family: 'Lobster', cursive;
-    font-size: 40px;
-    margin-left: 1cm;
-  }
-  .separator {
-    margin: 0 1cm;
-    border-left: 1px solid #000;
-    height: 50%;
+    height: 1cm;
+    padding: 0.3cm 0.3cm; 
   }
   .search-bar {
     flex-grow: 1;
-    display: flex;
-    align-items: center;
-    background-color: #ECECEC;
-    border-radius: 10px;
-    padding: 0 20px;
+    justify-content: space-between; 
   }
   .search-bar input {
-    border: none;
-    background: transparent;
-    color: #AEAEAE;
-    font-size: 16px;
+    width: 80%; 
   }
-  .search-bar input::placeholder {
-    color: #929292;
+  .search-text {
+    display: none; 
   }
-  .search-bar input:focus {
-    outline: none;
+  .separator1,.separator3,.separator2,.separator4{
+    margin: 0.5cm;
   }
-  .search-icon {
-    cursor: pointer;
-    margin-left: auto;
+  .cart-icon{
+    size: auto;
   }
-  .search-icon:hover {
-    color: #25B354;
-  }
-  .login-text {
-    color: #25B354;
-    cursor: pointer;
-    font-weight: bold;
-    font-size: 16px;
-  }
-  .cart-icon {
-    margin-left: 1cm;
-    cursor: pointer;
-  }
-  .main-content {
-    text-align: left;
-    color: #000;
-    font-family: 'Nunito ExtraLight', cursive;
-    padding: 2cm;
-  }
-  .main-content button {
-    background-color: #2D2D2D;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-  }
-
-  .location-button {
-    background: none;
-    border: none;
-    cursor: pointer;
+  .login-text, .location-button, .location-label {
     display: flex;
-    align-items: center;
-    padding: 5px;
   }
+}
 
-  .location-icon {
-    margin-right: 5px;
+
+/* Estilos responsivos */
+@media only screen and (max-width: 600px) {
+  .menu-bar {
+    height: 1cm;
+    padding: 0.3cm 0.3cm; 
   }
-
-  .location-label {
-    font-weight: bold;
-    font-size: 16px;
-    color:#25B354;
+  .cuevapp-title{
+    font-size: 15px;
   }
-
-  @media (max-width: 768px) {
-    .location-text,
-    .search-text {
-      display: none; 
-    }
-    .search-bar {
-      flex-grow: 1;
-      justify-content: space-between; 
-    }
-    .search-bar input {
-      width: 80%;
-    }
-    .menu-bar {
-      height: 1.5 cm; 
-      padding: auto; 
-    }
+  .search-bar {
+    flex-grow: 1;
+    justify-content: space-between; 
+    width: 3cm;
+    height: 0.8cm;
   }
-
-  .background-image {
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+  .search-bar input {
+    width: 80%; 
   }
+  .search-text {
+    display: none; 
+  }
+  .separator1,.separator3{
+    margin: 0.2cm;
+    border-left: 1px solid transparent;
+  }
+  .cart-icon{
+    size: auto;
+  }
+  .separator2, .login-text, .separator4, .location-button, .location-label {
+    display: none;
+  }
+}
+
+/* Estilos responsivos */
+@media only screen and (min-width: 992px) {
+  .menu-bar {
+    height: 1cm;
+    padding: 0.3cm 0.3cm; 
+  }
+  .search-bar {
+    flex-grow: 1;
+    justify-content: space-between; 
+  }
+  .search-bar input {
+    width: 80%; 
+  }
+  .search-text {
+    display: none; 
+  }
+  .separator1,.separator3,.separator2,.separator4{
+    margin: 1cm;
+  }
+  .cart-icon{
+    size: auto;
+  }
+  .login-text, .location-button, .location-label {
+    display: flex;
+  }
+}
 
 
 
-  
-  
+
+
