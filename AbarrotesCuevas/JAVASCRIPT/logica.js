@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   
     searchIcon.addEventListener('click', function() {
-      // Aquí puedes agregar la lógica para realizar la búsqueda
+      
     });
   });
   
