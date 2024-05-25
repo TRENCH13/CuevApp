@@ -45,6 +45,14 @@ body, html {
   margin-left: 1rem;
 }
 
+.cuevapp-title-center {
+  text-align: center;
+  color: #25B354;
+  font-family: 'Lobster', cursive;
+  font-size: 40px;
+  margin: auto;
+}
+
 .cuevapp-header {
   display: flex;
   justify-content: center;
@@ -55,8 +63,18 @@ body, html {
 }
 
 h1 {
+  font-family: 'Nunito';
+  size: 1rem;
   color: black;
   text-align: center; 
+}
+
+h2 {
+  font-family: 'Nunito';
+  size: 0.7rem;
+  color: black;
+  text-align: left; 
+  margin-left: 2rem;
 }
 
 .separator1 {
@@ -180,6 +198,24 @@ h1 {
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
+.header-simple {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  padding: 10px 20px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.header-centrado {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
 /* Estilos para el formulario */
 .form-group {
   display: flex;
@@ -236,13 +272,58 @@ input[type="checkbox"] {
   transform: scale(2);
 }
 
-/* Estilos de botónes */
+/* Pedidos de Repartidor*/
+.pedidos-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+/* Pendiente: diseñar el contenedor */
+
 
 .container {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
+
+.imagen-circular{
+  width: 200px; 
+  height: 200px; 
+  border-radius: 50%; 
+  object-fit: cover;
+}
+
+.container-bienvenida{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80%; 
+  max-width: 300px; 
+  margin: 0 auto; 
+}
+
+#username-label {
+  font-size: 3rem;
+  font-family: 'Nunito';
+  font-weight: bold;
+  margin-bottom: 10px; 
+}
+
+
+#username {
+  font-size: 3rem;
+  font-family: 'Nunito';
+  font-weight: bold;
+  width: 100%; 
+  padding: 10px;
+  border: 1px solid #ffffff;
+  border-radius: 4px;
+  box-sizing: border-box;
+  color: #25B354;
+}
+
 
 #registrarse-button {
   margin-top: 20px; /* Espacio entre el formulario y el botón */
