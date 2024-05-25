@@ -53,6 +53,14 @@ body, html {
   margin: auto;
 }
 
+.username-link {
+  color: #25B354;
+  font-family: 'Nunito', sans-serif;
+  font-size: 16px;
+  text-decoration: none;
+  margin-right: 1rem;
+}
+
 .cuevapp-header {
   display: flex;
   justify-content: center;
@@ -209,7 +217,7 @@ h2 {
 
 .header-centrado {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   padding: 10px 20px;
   background-color: #fff;
