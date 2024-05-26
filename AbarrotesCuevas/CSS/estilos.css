@@ -8,7 +8,6 @@ body, html {
 }
 
 .background-image {
-  background-image: url('../PNG/index1.png');
   background-size: cover;
   background-position: center;
   height: 100%;
@@ -74,7 +73,8 @@ h1 {
   font-family: 'Nunito';
   size: 1rem;
   color: black;
-  text-align: center; 
+  text-align: left; 
+  margin-left: 1.5rem;
 }
 
 h2 {
@@ -116,6 +116,7 @@ h2 {
   background-color: #ECECEC;
   border-radius: 10px;
   padding: 0 20px;
+  height: 0.8cm;
 }
 
 .search-bar input {
@@ -123,6 +124,7 @@ h2 {
   background: transparent;
   color: #AEAEAE;
   font-size: 16px;
+  height: 0.8cm;
 }
 
 .search-bar input::placeholder {
@@ -156,18 +158,11 @@ h2 {
   margin: center;
 }
 
-.main-content {
-  text-align: left;
-  color: #000;
-  font-family: 'Nunito ExtraLight', cursive;
-  padding: 2rem;
-  margin-top: 5rem;
-}
-
 .main-content button {
   background-color: #2D2D2D;
   color: #fff;
   border: none;
+  margin-left: 1.5rem;
   padding: 10px 20px;
   cursor: pointer;
 }
@@ -243,6 +238,13 @@ label {
 }
 
 input[type="text"] {
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 16px;
+  border-radius: 10px;
+}
+
+input[type="text2"] {
   width: 100%;
   padding: 10px;
   margin-bottom: 20px;

@@ -17,14 +17,14 @@ body{
     .barra ul{
         /*solucionar espacios no deseados*/
         padding:0px;
-        text-align: center;
-            
+        text-align: center;    
     }
 
     .barra  li{
         /*Velocidad de transicion del contenido*/
         transition:all .3s;
         list-style: none; 
+        display: none;
     }
 
     .barra:hover table{
@@ -133,7 +133,8 @@ body{
     .barra:hover li{
         border-top:1px solid #03121b;
         /*Espacios entre las lineas y el contenido*/
-        width:100%;    
+        width:100%;   
+        display: flex; 
     }
     
     .barra:hover ul:last-of-type{
