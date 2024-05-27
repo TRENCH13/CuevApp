@@ -134,7 +134,7 @@ body{
         border-top:1px solid #03121b;
         /*Espacios entre las lineas y el contenido*/
         width:100%;   
-        display: flex; 
+        display: block; 
     }
     
     .barra:hover ul:last-of-type{
@@ -149,18 +149,21 @@ body{
     
     @media (min-width: 601px){
         .barra:hover{
-        width: 40%;
+            width: 40%;
+            overflow: auto;
         }
     }
 
     @media (max-width: 600px){
         .barra:hover{
-        width: 80%;
+            width: 80%;
+            overflow: auto;
         }
     }
 
     @media (min-width: 992px){
         .barra:hover{
-        width: 25%;
+            width: 25%;
+            overflow: auto;
         }
     }
