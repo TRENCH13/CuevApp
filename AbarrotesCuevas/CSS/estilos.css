@@ -595,54 +595,6 @@ input[type="checkbox"] {
 }
 
 
-<<<<<<< HEAD
-/* Footer */
-footer {
-  background-color: #f5f5f5;
-  padding: 20px 0;
-  text-align: center;
-  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
-  margin-top: 40px;
-  display: flex;
-  justify-content: space-around;
-  align-items: flex-start;
-}
-
-footer .footer-section {
-  margin-bottom: 20px;
-}
-
-footer .footer-section h3 {
-  color: #000;
-  margin-bottom: 10px;
-  font-size: 18px;
-}
-
-footer .footer-section ul {
-  list-style: none;
-  padding: 0;
-}
-
-footer .footer-section ul li {
-  margin: 5px 0;
-  font-size: 16px;
-}
-
-footer .footer-section ul li a {
-  text-decoration: none;
-  color: #333;
-}
-
-.app-links {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-}
-
-.app-links a img {
-  width: 30px;
-}
-=======
 
 /* Estilos responsivos */
 @media only screen and (min-width: 601px) {
@@ -671,7 +623,6 @@ footer .footer-section ul li a {
   }
 }
 
->>>>>>> parent of 5ae8e0d (Update estilos.css)
 
 
 
@@ -782,7 +733,6 @@ footer .footer-section ul li a {
 .container {
   display: flex;
   flex-direction: column;
-	@@ -483,6 +595,54 @@ input[type="checkbox"] {
 }
 
 
