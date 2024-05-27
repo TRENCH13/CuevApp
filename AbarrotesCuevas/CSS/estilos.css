@@ -255,49 +255,6 @@ input[type="text2"] {
   border-radius: 10px;
 }
 
-/* Contendor de Pedidos para Repartidor y Ejecutivo*/
-.pedidos-container {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 20px;
-  margin-top: 20px;
-}
-
-.pedido {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px;
-  border: 1px solid #e0e0e0;
-  border-radius: 10px;
-  background-color: white;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  width: 350px;
-}
-
-.pedido-info {
-  display: flex;
-  flex-direction: column;
-  text-align: left;
-}
-
-.productos {
-  color: green;
-  font-weight: bold;
-}
-
-.direccion {
-  font-weight: normal;
-  margin-top: 5px;
-}
-
-.icono-flecha {
-  font-size: 24px;
-  display: flex;
-  align-items: center;
-}
-
 input[type="password"] {
   width: 100%;
   padding: 10px;
@@ -307,83 +264,6 @@ input[type="password"] {
   box-sizing: border-box;
   font-size: 16px;
   border-radius: 10px;
-}
-
-/* Detalles Pedido a Revisión de Ejecutivo */
-
-.detalles-pedido-general-container {
-  align-items: center;
-  text-align: center;
-  padding: 20px;
-}
-
-.detalles-pedido-general-container h1 {
-  font-size: 36px;
-  margin: 20px 0;
-
-}
-
-.detalles-pedido-general-container h1 span {
-  color: #00b35f;
-}
-
-.detalles-pedido-container {
-  background-color: white;
-  border-radius: 10px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  margin: 20px auto;
-  padding: 20px;
-  max-width: 600px;
-  text-align: left;
-}
-
-.detalles-pedido-container h2{
-  color: #2D2D2D;
-  font-size: 24px;
-  margin-bottom: 10px;
-}
-
-.detalles-pedido-container p{
-  color: #000;
-  font-size: 18px;
-  margin: 5px 0;
-}
-
-.detalles-pedido-container p span{
-  color: #000;
-  font-weight: bold;
-}
-
-.buttons-ejecutivo-container {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  margin-top: 20px;
-}
-
-.buttons-container {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  margin-top: 20px;
-}
-
-.button {
-  padding: 10px 20px;
-  font-size: 16px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.button-accept {
-  background-color: #00b35f;
-  color: white;
-}
-
-.button-reject {
-  background-color: #ff4d4d;
-  color: white;
 }
 
 input[type="date"] {
@@ -693,53 +573,6 @@ input[type="checkbox"] {
   flex-direction: column;
 }
 
-/* Footer */
-footer {
-  background-color: #f5f5f5;
-  padding: 20px 0;
-  text-align: center;
-  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
-  margin-top: 40px;
-  display: flex;
-  justify-content: space-around;
-  align-items: flex-start;
-}
-
-footer .footer-section {
-  margin-bottom: 20px;
-}
-
-footer .footer-section h3 {
-  color: #000;
-  margin-bottom: 10px;
-  font-size: 18px;
-}
-
-footer .footer-section ul {
-  list-style: none;
-  padding: 0;
-}
-
-footer .footer-section ul li {
-  margin: 5px 0;
-  font-size: 16px;
-}
-
-footer .footer-section ul li a {
-  text-decoration: none;
-  color: #333;
-}
-
-.app-links {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-}
-
-.app-links a img {
-  width: 30px;
-}
-
 .fragment-admin{
   font-family: 'Nunito', sans-serif;
 }
@@ -869,6 +702,136 @@ footer .footer-section ul li a {
   }
 }
 
+/* Detalles Pedido a Revisión de Ejecutivo */
+
+.detalles-pedido-general-container {
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.detalles-pedido-general-container h1 {
+  font-size: 36px;
+  margin: 20px 0;
+
+}
+
+.detalles-pedido-general-container h1 span {
+  color: #00b35f;
+}
+
+.detalles-pedido-container {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin: 20px auto;
+  padding: 20px;
+  max-width: 600px;
+  text-align: left;
+}
+
+.detalles-pedido-container h2{
+  color: #2D2D2D;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.detalles-pedido-container p{
+  color: #000;
+  font-size: 18px;
+  margin: 5px 0;
+}
+
+.detalles-pedido-container p span{
+  color: #000;
+  font-weight: bold;
+}
+
+.buttons-ejecutivo-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.buttons-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.button {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.button-accept {
+  background-color: #00b35f;
+  color: white;
+}
+
+.button-reject {
+  background-color: #ff4d4d;
+  color: white;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+	@@ -483,6 +595,54 @@ input[type="checkbox"] {
+}
+
+
+/* Footer */
+footer {
+  background-color: #f5f5f5;
+  padding: 20px 0;
+  text-align: center;
+  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+
+footer .footer-section {
+  margin-bottom: 20px;
+}
+
+footer .footer-section h3 {
+  color: #000;
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+footer .footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+footer .footer-section ul li {
+  margin: 5px 0;
+  font-size: 16px;
+}
+
+footer .footer-section ul li a {
+  text-decoration: none;
+  color: #333;
+}
+
+.app-links {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.app-links a img {
+  width: 30px;
+}
 
 /* Estilos responsivos */
 @media only screen and (max-width: 600px) {
