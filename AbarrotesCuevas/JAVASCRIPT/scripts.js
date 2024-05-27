@@ -1,17 +1,19 @@
 // Datos de ejemplo para los productos
+var ruta = '../PNG/noimage.png';
+
 const productos = [
-    { id: 1, nombre: 'Producto 1', precio: 100, imagen: 'ruta-imagen1.jpg' },
-    { id: 2, nombre: 'Producto 2', precio: 200, imagen: 'ruta-imagen2.jpg' },
-    { id: 3, nombre: 'Producto 1', precio: 100, imagen: 'ruta-imagen1.jpg' },
-    { id: 4, nombre: 'Producto 2', precio: 200, imagen: 'ruta-imagen2.jpg' },
-    { id: 5, nombre: 'Producto 1', precio: 100, imagen: 'ruta-imagen1.jpg' },
-    { id: 6, nombre: 'Producto 2', precio: 200, imagen: 'ruta-imagen2.jpg' },
-    { id: 7, nombre: 'Producto 1', precio: 100, imagen: 'ruta-imagen1.jpg' },
-    { id: 8, nombre: 'Producto 2', precio: 200, imagen: 'ruta-imagen2.jpg' },
-    { id: 9, nombre: 'Producto 1', precio: 100, imagen: 'ruta-imagen1.jpg' },
-    { id: 10, nombre: 'Producto 2', precio: 200, imagen: 'ruta-imagen2.jpg' },
-    { id: 11, nombre: 'Producto 1', precio: 100, imagen: 'ruta-imagen1.jpg' },
-    { id: 12, nombre: 'Producto 2', precio: 200, imagen: 'ruta-imagen2.jpg' },
+    { id: 1, nombre: 'Producto 1', precio: 100, imagen: '../PNG/noimage.png' },
+    { id: 2, nombre: 'Producto 2', precio: 200, imagen: ruta },
+    { id: 3, nombre: 'Producto 1', precio: 100, imagen: ruta },
+    { id: 4, nombre: 'Producto 2', precio: 200, imagen: ruta },
+    { id: 5, nombre: 'Producto 1', precio: 100, imagen: ruta },
+    { id: 6, nombre: 'Producto 2', precio: 200, imagen: ruta },
+    { id: 7, nombre: 'Producto 1', precio: 100, imagen: ruta },
+    { id: 8, nombre: 'Producto 2', precio: 200, imagen: ruta },
+    { id: 9, nombre: 'Producto 1', precio: 100, imagen: ruta },
+    { id: 10, nombre: 'Producto 2', precio: 200, imagen: ruta },
+    { id: 11, nombre: 'Producto 1', precio: 100, imagen: ruta },
+    { id: 12, nombre: 'Producto 2', precio: 200, imagen: ruta },
     // ... Agrega más productos según sea necesario
 ];
 
