@@ -740,6 +740,20 @@ footer .footer-section ul li a {
      color: #00b35f;
 }
 
+.detalles-pedido-general-container label {
+  font-family: 'Nunito', sans-serif;
+  font-size: 3rem;
+  margin: 20px 0;
+}
+
+.detalles-pedido-general-container input {
+  font-family: 'Nunito', sans-serif;
+  font-size: 1rem;
+  margin: 20px 0;
+  box-shadow: #000;
+
+}
+
 .detalles-pedido-container {
      background-color: white;
      border-radius: 10px;
