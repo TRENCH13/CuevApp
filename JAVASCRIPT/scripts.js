@@ -1,5 +1,5 @@
 // Datos de ejemplo para los productos
-var ruta = '../PNG/noimage.png';
+var ruta = 'PNG/noimage.png';
 var totalCart = 0;
 
 const productos = [
