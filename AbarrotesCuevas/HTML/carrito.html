@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>Carrito de Compras</title>
+        <link rel="stylesheet" href="../CSS/cart.css">
+    </head>
+    <body>
+        
+        <header class="header">
+            <h1>Tu carrito</h1>
+            <div class="location">
+                <img src="../PNG/ubicacion.png" alt="Ubicación">
+                <span id="user-location">Obteniendo ubicación...</span>
+            </div>
+        </header>
+        <div class="cart-container">
+            <div id="empty-cart" class="empty-cart">
+                <img src="../PNG/carrito.png" alt="Carrito Vacío">
+                <p>Aún no tienes ningún producto en tu carrito</p>
+            </div>
+            <div id="cart-items" class="cart-items"></div>
+            <div id="cart-total" class="cart-total">Total: $<span id="total-amount">0</span></div>
+        </div>
+        <div class="cart-buttons">
+            <button id="go-shopping" class="btnCart" style="display: none;">Ir a comprar</button>
+            <button id="pay-now" class="btnCart" style="display: block;">Pagar</button>
+        </div>
+
+        <!-- Modal -->
+        <div id="payment-modal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Selecciona tu método de pago</h2>
+                <p id="payment-amount">Para pagar: $0</p> <!-- Elemento para mostrar el total a pagar -->
+                <button id="pay-cash" class="payment-method">Efectivo</button>
+                <button id="pay-card" class="payment-method">Tarjeta de Débito/Crédito</button>
+            </div>
+        </div>
+
+
+        <!-- Incluye los scripts -->
+        <script src="../JAVASCRIPT/scripts.js"></script>
+        <script src="../JAVASCRIPT/pay.js"></script>
+    </body>
+</html>

@@ -11,64 +11,69 @@
 <body>
     <div class="background-image">
         <div class="menu-bar">
-            <!-- Icono del menú -->
             <div class="menu-icon">
                 <div class="barra">
-                    <h2>CuevApp</h2>
+                    <h2 id="cuevapp-title">CuevApp</h2>
                     <table>
                         <tr>
-                            <td>
-                                <button>Ingresa</button>
-                            </td>
-                            <td>
-                                <button>Registro</button>
-                            </td>
+                            <td><button id="btn-ingresar">Ingresa</button></td>
+                            <td><button id="btn-registrar">Registro</button></td>
                         </tr>
                     </table>
                     <h3>Secciones:</h3>
-                    <ul>
-                        <li><a href="Index.html">Linea Blanca</a></li>
-                        <li><a href="contacto.html">Carniceria</a></li>
-                        <li><a href="contacto.html">Frutas y Verduras</a></li>
-                        <li><a href="contacto.html">Bebidas</a></li>
-                        <li><a href="contacto.html">Depensa</a></li>
-                        <li><a href="contacto.html">Cuidado Personal</a></li>
-                        <li><a href="contacto.html">Mascotas</a></li>
-                        <li id=ultimoelemento><a href="contacto.html">Bebes</a></li>
+                    <ul id="secciones">
+                        <li><a href="#">Linea Blanca</a></li>
+                        <li><a href="#">Carniceria</a></li>
+                        <li><a href="#">Frutas y Verduras</a></li>
+                        <li><a href="#">Bebidas</a></li>
+                        <li><a href="#">Despensa</a></li>
+                        <li><a href="#">Cuidado Personal</a></li>
+                        <li><a href="#">Mascotas</a></li>
+                        <li id="ultimoelemento"><a href="#">Bebes</a></li>
                     </ul>
                     <h3>Otros:</h3>
                     <ule>
                         <listExt><h4 href="Index.html">Quiero ser repartidor</h4></listExt>
                         <listExt><h4 href="contacto.html">Conoce a CuevApp</h4></listExt>
-                        <listExt id=ultimoelemento><h4 href="contacto.html">Terminos y condiciones</h4></listExt>
+                        <listExt id="ultimoelemento"><h4 href="contacto.html">Términos y condiciones</h4></listExt>
                     </ule>
                 </div>
             </div>
-            <div class="cuevapp-title">CuevApp</div>
+            <div class="cuevapp-title" id="cuevapp-title-header">CuevApp</div>
             <div class="separator1"></div>
-            <!-- Icono del menú -->
             <div class="boton-ubicacion">
-                <button class="location-button">
-                    <span class="location-icon">📍</span>
-                    <span class="location-label">Xalapa</span>
-                </button>
+                <div class="location" id="location-button">
+                    <img src="../PNG/ubicacion.png" alt="Ubicación">
+                    <span id="user-location">Obteniendo ubicación...</span>
+                </div>
             </div>
             <div class="separator2"></div>
-            <!-- Barra de búsqueda -->
             <div class="search-bar">
                 <input type="text" placeholder="Busca cualquier producto ...">
                 <div class="search-icon">🔍</div>
             </div>
             <div class="separator3"></div>
-            <!-- Texto de inicio de sesión -->
-            <div class="login-text">Ingresa</div>
+            <div class="dropdown">
+                <div class="login-text" id="username-display">Ingresa</div>
+                <div class="dropdown-content">
+                    <a href="#" id="ver-perfil">
+                        <img src="../PNG/user.png" alt="Perfil" width="16" height="16">
+                        Ver perfil
+                    </a>
+                    <a href="#" id="ver-pedidos">
+                        <img src="../PNG/bolsa.png" alt="Pedidos" width="16" height="16">
+                        Ver pedidos
+                    </a>
+                </div>
+            </div>
             <div class="separator4"></div>
-            <!-- Icono del carrito de compras -->
-            <div class="cart-icon">🛒</div>
+            <div class="cart-icon" id="cart-icon"></div>
         </div>
         <main>
-            <iframe name="paginas" src="main.html" frameborder="0"></iframe>
+            <iframe name="paginas" src="../HTML/main.html" frameborder="0"></iframe>
         </main>
-        <script src="../JAVASCRIPT/logica.js"></script>
+    </div>
+    <script src="../JAVASCRIPT/logica.js"></script>
+    <script src="../JAVASCRIPT/scripts.js"></script>
 </body>
 </html>
