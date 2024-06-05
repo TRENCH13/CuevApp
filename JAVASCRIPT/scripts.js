@@ -48,7 +48,7 @@ function showPosition(position) {
     const longitude = position.coords.longitude;
 
     // Llamada a la API de OpenWeatherMap para obtener el nombre de la ciudad
-    const apiKey = 'b9b86a55f18721d938d2256593a8ade0';  
+    const apiKey = 'b9b86a55f18721d938d2256593a8ade0';
     const apiUrl = `http://api.openweathermap.org/data/2.5/forecast?lat=${latitude}&lon=${longitude}&appid=${apiKey}`;
 
     fetch(apiUrl)
@@ -71,7 +71,7 @@ function showPosition(position) {
 
 function showError(error) {
     const locationElement = document.getElementById('user-location');
-    switch(error.code) {
+    switch (error.code) {
         case error.PERMISSION_DENIED:
             locationElement.textContent = "Usuario denegó la solicitud de geolocalización.";
             break;
@@ -95,7 +95,7 @@ function agregarAlCarrito(idProducto) {
     localStorage.setItem('productoSeleccionado', JSON.stringify(producto));
 
     // Redirige a detailproducts.html
-    window.location.href = '../HTML/detailsProduct.html';
+    window.location.href = '../detailsProduct.html';
 }
 
 // Inicializar la lista de productos al cargar la página
@@ -119,7 +119,7 @@ function obtenerDetallesProducto(idProducto) {
 // Función para mostrar los detalles del producto en detailproducts.html
 function mostrarDetallesProducto() {
     const productoSeleccionado = JSON.parse(localStorage.getItem('productoSeleccionado'));
-    
+
     if (productoSeleccionado) {
         document.getElementById('product-name').textContent = productoSeleccionado.nombre;
         document.getElementById('product-image').src = productoSeleccionado.imagen;
@@ -144,7 +144,7 @@ document.getElementById('add-to-cart').addEventListener('click', function() {
 
     localStorage.setItem('cart', JSON.stringify(cart));
     alert('Producto agregado al carrito');
-    window.location.href = '../HTML/productos.html';
+    window.location.href = '../productos.html';
 });
 
 // Función para mostrar u ocultar los botones según el contenido del carrito

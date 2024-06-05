@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 const botonModificar = document.createElement('button');
                 botonModificar.textContent = 'Modificar';
                 botonModificar.addEventListener('click', () => {
-                    window.location.href = `../HTML/carrito.html?id=${pedido.id}&productos=${encodeURIComponent(JSON.stringify(pedido.productos))}`;
+                    window.location.href = `../carrito.html?id=${pedido.id}&productos=${encodeURIComponent(JSON.stringify(pedido.productos))}`;
                 });
                 itemPedido.appendChild(botonModificar);
                 listaPendientes.appendChild(itemPedido);
@@ -49,14 +49,14 @@ document.addEventListener('DOMContentLoaded', function() {
                 const botonModificarDireccion = document.createElement('button');
                 botonModificarDireccion.textContent = 'Modificar dirección';
                 botonModificarDireccion.addEventListener('click', () => {
-                    window.location.href = `../HTML/adress.html?id=${pedido.id}&direccion=${encodeURIComponent(pedido.direccion)}`;
+                    window.location.href = `../adress.html?id=${pedido.id}&direccion=${encodeURIComponent(pedido.direccion)}`;
                 });
                 itemPedido.appendChild(botonModificarDireccion);
                 listaEntrega.appendChild(itemPedido);
             } else if (pedido.estado === 'enviado') {
                 const botonComprarDeNuevo = document.createElement('button');
                 botonComprarDeNuevo.textContent = 'Comprar de nuevo';
-                botonCancelar.style.display="none";
+                botonCancelar.style.display = "none";
                 botonComprarDeNuevo.addEventListener('click', () => {
                     comprarDeNuevo(pedido);
                 });
@@ -64,7 +64,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 listaEnviados.appendChild(itemPedido);
             } else if (pedido.estado === 'cancelado') {
                 listaCancelados.appendChild(itemPedido);
-                botonCancelar.style.display="none";
+                botonCancelar.style.display = "none";
             }
         });
 

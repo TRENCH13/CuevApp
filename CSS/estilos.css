@@ -1,5 +1,6 @@
 /* Estilos CSS */
-body, html {
+body,
+html {
     margin: 0;
     padding: 0;
     height: 100%;
@@ -46,9 +47,9 @@ iframe {
     margin: center;
 }
 
-    .menu-icon:hover {
-        background-color: #25B354;
-    }
+.menu-icon:hover {
+    background-color: #25B354;
+}
 
 .cuevapp-title {
     color: #25B354;
@@ -141,30 +142,30 @@ h2 {
     height: 0.8cm;
 }
 
-    .search-bar input {
-        border: none;
-        background: transparent;
-        color: #AEAEAE;
-        font-size: 16px;
-        height: 0.8cm;
-    }
+.search-bar input {
+    border: none;
+    background: transparent;
+    color: #AEAEAE;
+    font-size: 16px;
+    height: 0.8cm;
+}
 
-        .search-bar input::placeholder {
-            color: #929292;
-        }
+.search-bar input::placeholder {
+    color: #929292;
+}
 
-        .search-bar input:focus {
-            outline: none;
-        }
+.search-bar input:focus {
+    outline: none;
+}
 
 .search-icon {
     cursor: pointer;
     margin-left: auto;
 }
 
-    .search-icon:hover {
-        color: #25B354;
-    }
+.search-icon:hover {
+    color: #25B354;
+}
 
 .login-text {
     color: #25B354;
@@ -220,7 +221,7 @@ buttonMain {
     align-items: center;
     padding: 10px 20px;
     background-color: #fff;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .header-simple {
@@ -229,7 +230,7 @@ buttonMain {
     text-align: center;
     padding: 10px 20px;
     background-color: #fff;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .header-centrado {
@@ -238,7 +239,7 @@ buttonMain {
     align-items: center;
     padding: 10px 20px;
     background-color: #fff;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 /* Estilos para el formulario */
@@ -312,6 +313,7 @@ input[type="checkbox"] {
     gap: 20px;
     margin-top: 20px;
 }
+
 .pedido {
     display: flex;
     justify-content: space-between;
@@ -345,6 +347,7 @@ input[type="checkbox"] {
     display: flex;
     align-items: center;
 }
+
 /* Pendiente: diseñar el contenedor */
 
 /* Detalles Pedido a Revisión de Ejecutivo */
@@ -374,21 +377,21 @@ input[type="checkbox"] {
     text-align: left;
 }
 
-.detalles-pedido-container h2{
+.detalles-pedido-container h2 {
     color: #2D2D2D;
     font-size: 24px;
     margin-bottom: 10px;
 }
 
-.detalles-pedido-container p{
+.detalles-pedido-container p {
     color: #000;
     font-size: 18px;
     margin: 5px 0;
 }
 
-.detalles-pedido-container p span{
-            color: #000;
-            font-weight: bold;
+.detalles-pedido-container p span {
+    color: #000;
+    font-weight: bold;
 }
 
 .buttons-ejecutivo-container {
@@ -422,20 +425,21 @@ input[type="checkbox"] {
     background-color: #ff4d4d;
     color: white;
 }
+
 .container {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.imagen-circular{
+.imagen-circular {
     width: 200px;
     height: 200px;
     border-radius: 50%;
     object-fit: cover;
 }
 
-.container-bienvenida{
+.container-bienvenida {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -466,7 +470,8 @@ input[type="checkbox"] {
 
 
 #registrarse-button {
-    margin-top: 20px; /* Espacio entre el formulario y el botón */
+    margin-top: 20px;
+    /* Espacio entre el formulario y el botón */
 }
 
 .button {
@@ -511,21 +516,21 @@ input[type="checkbox"] {
     width: 25%;
     background-color: #f4f4f4;
     padding: 20px;
-    box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 
-    .left-admin-container h2 {
-        font-family: 'Nunito Bold', sans-serif;
-        display: block;
-        font-size: 1.5rem;
-        margin-bottom: 20px;
-        align-items: center;
-        justify-content: center;
-    }
+.left-admin-container h2 {
+    font-family: 'Nunito Bold', sans-serif;
+    display: block;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    align-items: center;
+    justify-content: center;
+}
 
 .button-admin-container {
     display: flex;
@@ -546,9 +551,9 @@ input[type="checkbox"] {
     height: 5rem;
 }
 
-    .action-admin-button-usuario:hover {
-        background-color: #e45151;
-    }
+.action-admin-button-usuario:hover {
+    background-color: #e45151;
+}
 
 .action-admin-button-sucursal {
     padding: 10px;
@@ -561,9 +566,9 @@ input[type="checkbox"] {
     height: 5rem;
 }
 
-    .action-admin-button-sucursal:hover {
-        background-color: #4fdb7d;
-    }
+.action-admin-button-sucursal:hover {
+    background-color: #4fdb7d;
+}
 
 .action-admin-button-producto {
     padding: 10px;
@@ -576,9 +581,9 @@ input[type="checkbox"] {
     height: 5rem;
 }
 
-    .action-admin-button-producto:hover {
-        background-color: #6482ce;
-    }
+.action-admin-button-producto:hover {
+    background-color: #6482ce;
+}
 
 .right-admin-container {
     background-color: #ECECEC;
@@ -591,26 +596,27 @@ input[type="checkbox"] {
     flex-direction: column;
 }
 
-.fragment-admin{
+.fragment-admin {
     font-family: 'Nunito', sans-serif;
 }
 
-    .fragment-admin h3 {
-        text-align: center;
-        color: black;
-    }
+.fragment-admin h3 {
+    text-align: center;
+    color: black;
+}
 
-    .fragment-admin form {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
+.fragment-admin form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
 
-    .fragment-admin label {
-        font-weight: bold;
-        margin-top: 10px;
-    }
+.fragment-admin label {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
 footer {
     background-color: #f5f5f5;
     padding: 20px 0;
@@ -677,15 +683,20 @@ footer .footer-section ul li a {
         display: none;
     }
 
-    .separator1,.separator3,.separator2,.separator4{
+    .separator1,
+    .separator3,
+    .separator2,
+    .separator4 {
         margin: 0.5cm;
     }
 
-    .cart-icon{
+    .cart-icon {
         size: auto;
     }
 
-    .login-text, .location-button, .location-label {
+    .login-text,
+    .location-button,
+    .location-label {
         display: flex;
     }
 }
@@ -703,15 +714,18 @@ footer .footer-section ul li a {
         justify-content: space-between;
     }
 
-        .search-bar input {
-            width: 80%;
-        }
+    .search-bar input {
+        width: 80%;
+    }
 
     .search-text {
         display: none;
     }
 
-    .separator1, .separator3, .separator2, .separator4 {
+    .separator1,
+    .separator3,
+    .separator2,
+    .separator4 {
         margin: 0.5cm;
     }
 
@@ -719,9 +733,12 @@ footer .footer-section ul li a {
         size: auto;
     }
 
-    .login-text, .location-button, .location-label {
+    .login-text,
+    .location-button,
+    .location-label {
         display: flex;
     }
+
     /* Detalles Pedido a Revisión de Ejecutivo */
 
     .detalles-pedido-general-container {
@@ -730,27 +747,27 @@ footer .footer-section ul li a {
         padding: 20px;
     }
 
-        .detalles-pedido-general-container h1 {
-            font-size: 36px;
-            margin: 20px 0;
-        }
+    .detalles-pedido-general-container h1 {
+        font-size: 36px;
+        margin: 20px 0;
+    }
 
-            .detalles-pedido-general-container h1 span {
-                color: #00b35f;
-            }
+    .detalles-pedido-general-container h1 span {
+        color: #00b35f;
+    }
 
-        .detalles-pedido-general-container label {
-            font-family: 'Nunito', sans-serif;
-            font-size: 3rem;
-            margin: 20px 0;
-        }
+    .detalles-pedido-general-container label {
+        font-family: 'Nunito', sans-serif;
+        font-size: 3rem;
+        margin: 20px 0;
+    }
 
-        .detalles-pedido-general-container input {
-            font-family: 'Nunito', sans-serif;
-            font-size: 1rem;
-            margin: 20px 0;
-            box-shadow: #000;
-        }
+    .detalles-pedido-general-container input {
+        font-family: 'Nunito', sans-serif;
+        font-size: 1rem;
+        margin: 20px 0;
+        box-shadow: #000;
+    }
 
     .detalles-pedido-container {
         background-color: white;
@@ -762,22 +779,22 @@ footer .footer-section ul li a {
         text-align: left;
     }
 
-        .detalles-pedido-container h2 {
-            color: #2D2D2D;
-            font-size: 24px;
-            margin-bottom: 10px;
-        }
+    .detalles-pedido-container h2 {
+        color: #2D2D2D;
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
 
-        .detalles-pedido-container p {
-            color: #000;
-            font-size: 18px;
-            margin: 5px 0;
-        }
+    .detalles-pedido-container p {
+        color: #000;
+        font-size: 18px;
+        margin: 5px 0;
+    }
 
-            .detalles-pedido-container p span {
-                color: #000;
-                font-weight: bold;
-            }
+    .detalles-pedido-container p span {
+        color: #000;
+        font-weight: bold;
+    }
 
     .buttons-ejecutivo-container {
         display: flex;
@@ -829,30 +846,30 @@ footer .footer-section ul li a {
         align-items: flex-start;
     }
 
-        footer .footer-section {
-            margin-bottom: 20px;
-        }
+    footer .footer-section {
+        margin-bottom: 20px;
+    }
 
-            footer .footer-section h3 {
-                color: #000;
-                margin-bottom: 10px;
-                font-size: 18px;
-            }
+    footer .footer-section h3 {
+        color: #000;
+        margin-bottom: 10px;
+        font-size: 18px;
+    }
 
-            footer .footer-section ul {
-                list-style: none;
-                padding: 0;
-            }
+    footer .footer-section ul {
+        list-style: none;
+        padding: 0;
+    }
 
-                footer .footer-section ul li {
-                    margin: 5px 0;
-                    font-size: 16px;
-                }
+    footer .footer-section ul li {
+        margin: 5px 0;
+        font-size: 16px;
+    }
 
-                    footer .footer-section ul li a {
-                        text-decoration: none;
-                        color: #333;
-                    }
+    footer .footer-section ul li a {
+        text-decoration: none;
+        color: #333;
+    }
 
     .app-links {
         display: flex;
@@ -860,9 +877,9 @@ footer .footer-section ul li a {
         gap: 10px;
     }
 
-        .app-links a img {
-            width: 30px;
-        }
+    .app-links a img {
+        width: 30px;
+    }
 
     /* Estilos responsivos */
     @media only screen and (max-width: 600px) {
@@ -882,15 +899,16 @@ footer .footer-section ul li a {
             height: 0.8cm;
         }
 
-            .search-bar input {
-                width: 80%;
-            }
+        .search-bar input {
+            width: 80%;
+        }
 
         .search-text {
             display: none;
         }
 
-        .separator1, .separator3 {
+        .separator1,
+        .separator3 {
             margin: 0.2cm;
             border-left: 1px solid transparent;
         }
@@ -899,7 +917,11 @@ footer .footer-section ul li a {
             size: auto;
         }
 
-        .separator2, .login-text, .separator4, .location-button, .location-label {
+        .separator2,
+        .login-text,
+        .separator4,
+        .location-button,
+        .location-label {
             display: none;
         }
 
@@ -930,15 +952,18 @@ footer .footer-section ul li a {
             justify-content: space-between;
         }
 
-            .search-bar input {
-                width: 80%;
-            }
+        .search-bar input {
+            width: 80%;
+        }
 
         .search-text {
             display: none;
         }
 
-        .separator1, .separator3, .separator2, .separator4 {
+        .separator1,
+        .separator3,
+        .separator2,
+        .separator4 {
             margin: 1cm;
         }
 
@@ -946,12 +971,16 @@ footer .footer-section ul li a {
             size: auto;
         }
 
-        .login-text, .location-button, .location-label {
+        .login-text,
+        .location-button,
+        .location-label {
             display: flex;
         }
     }
+
     /* Estilos CSS */
-    body, html {
+    body,
+    html {
         margin: 0;
         padding: 0;
         height: 100%;
@@ -1088,11 +1117,11 @@ footer .footer-section ul li a {
         cursor: pointer;
     }
 
-        .location img {
-            width: 20px;
-            height: 20px;
-            margin-right: 5px;
-        }
+    .location img {
+        width: 20px;
+        height: 20px;
+        margin-right: 5px;
+    }
 
     .login-text {
         color: #25B354;
@@ -1136,16 +1165,16 @@ footer .footer-section ul li a {
         padding: 0.5rem;
     }
 
-        .search-bar input {
-            border: none;
-            background-color: #fdfdfdb0;
-            ;
-            outline: none;
-            flex-grow: 1;
-            padding: 0.5rem;
-            border-radius: 2rem;
-            font-family: 'Nunito', sans-serif;
-        }
+    .search-bar input {
+        border: none;
+        background-color: #fdfdfdb0;
+        ;
+        outline: none;
+        flex-grow: 1;
+        padding: 0.5rem;
+        border-radius: 2rem;
+        font-family: 'Nunito', sans-serif;
+    }
 
     .search-icon {
         margin-left: 0.5rem;
@@ -1172,22 +1201,22 @@ footer .footer-section ul li a {
         position: absolute;
         background-color: white;
         min-width: 160px;
-        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
         z-index: 1;
         right: 0;
     }
 
-        .dropdown-content a {
-            color: black;
-            padding: 12px 16px;
-            text-decoration: none;
-            display: flex;
-            align-items: center;
-        }
+    .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+    }
 
-            .dropdown-content a:hover {
-                background-color: #f1f1f1;
-            }
+    .dropdown-content a:hover {
+        background-color: #f1f1f1;
+    }
 
     .dropdown:hover .dropdown-content {
         display: block;
@@ -1307,6 +1336,7 @@ footer .footer-section ul li a {
         display: flex;
         align-items: center;
     }
+
     /* Pendiente: diseñar el contenedor */
 
     /* Detalles Pedido a Revisión de Ejecutivo */
@@ -1317,14 +1347,14 @@ footer .footer-section ul li a {
         padding: 20px;
     }
 
-        .detalles-pedido-general-container h1 {
-            font-size: 36px;
-            margin: 20px 0;
-        }
+    .detalles-pedido-general-container h1 {
+        font-size: 36px;
+        margin: 20px 0;
+    }
 
-            .detalles-pedido-general-container h1 span {
-                color: #00b35f;
-            }
+    .detalles-pedido-general-container h1 span {
+        color: #00b35f;
+    }
 
     .detalles-pedido-container {
         background-color: white;
@@ -1336,22 +1366,22 @@ footer .footer-section ul li a {
         text-align: left;
     }
 
-        .detalles-pedido-container h2 {
-            color: #2D2D2D;
-            font-size: 24px;
-            margin-bottom: 10px;
-        }
+    .detalles-pedido-container h2 {
+        color: #2D2D2D;
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
 
-        .detalles-pedido-container p {
-            color: #000;
-            font-size: 18px;
-            margin: 5px 0;
-        }
+    .detalles-pedido-container p {
+        color: #000;
+        font-size: 18px;
+        margin: 5px 0;
+    }
 
-            .detalles-pedido-container p span {
-                color: #000;
-                font-weight: bold;
-            }
+    .detalles-pedido-container p span {
+        color: #000;
+        font-weight: bold;
+    }
 
     .buttons-ejecutivo-container {
         display: flex;
@@ -1429,7 +1459,8 @@ footer .footer-section ul li a {
 
 
     #registrarse-button {
-        margin-top: 20px; /* Espacio entre el formulario y el botón */
+        margin-top: 20px;
+        /* Espacio entre el formulario y el botón */
     }
 
     .button {
@@ -1474,21 +1505,21 @@ footer .footer-section ul li a {
         width: 25%;
         background-color: #f4f4f4;
         padding: 20px;
-        box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+        box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
     }
 
-        .left-admin-container h2 {
-            font-family: 'Nunito Bold', sans-serif;
-            display: block;
-            font-size: 1.5rem;
-            margin-bottom: 20px;
-            align-items: center;
-            justify-content: center;
-        }
+    .left-admin-container h2 {
+        font-family: 'Nunito Bold', sans-serif;
+        display: block;
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+        align-items: center;
+        justify-content: center;
+    }
 
     .button-admin-container {
         display: flex;
@@ -1509,9 +1540,9 @@ footer .footer-section ul li a {
         height: 5rem;
     }
 
-        .action-admin-button-usuario:hover {
-            background-color: #e45151;
-        }
+    .action-admin-button-usuario:hover {
+        background-color: #e45151;
+    }
 
     .action-admin-button-sucursal {
         padding: 10px;
@@ -1524,9 +1555,9 @@ footer .footer-section ul li a {
         height: 5rem;
     }
 
-        .action-admin-button-sucursal:hover {
-            background-color: #4fdb7d;
-        }
+    .action-admin-button-sucursal:hover {
+        background-color: #4fdb7d;
+    }
 
     .action-admin-button-producto {
         padding: 10px;
@@ -1539,9 +1570,9 @@ footer .footer-section ul li a {
         height: 5rem;
     }
 
-        .action-admin-button-producto:hover {
-            background-color: #6482ce;
-        }
+    .action-admin-button-producto:hover {
+        background-color: #6482ce;
+    }
 
     .right-admin-container {
         background-color: #ECECEC;
@@ -1558,22 +1589,22 @@ footer .footer-section ul li a {
         font-family: 'Nunito', sans-serif;
     }
 
-        .fragment-admin h3 {
-            text-align: center;
-            color: black;
-        }
+    .fragment-admin h3 {
+        text-align: center;
+        color: black;
+    }
 
-        .fragment-admin form {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
+    .fragment-admin form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 
 
-        .fragment-admin label {
-            font-weight: bold;
-            margin-top: 10px;
-        }
+    .fragment-admin label {
+        font-weight: bold;
+        margin-top: 10px;
+    }
 
     footer {
         background-color: #f5f5f5;
@@ -1586,30 +1617,30 @@ footer .footer-section ul li a {
         align-items: flex-start;
     }
 
-        footer .footer-section {
-            margin-bottom: 20px;
-        }
+    footer .footer-section {
+        margin-bottom: 20px;
+    }
 
-            footer .footer-section h3 {
-                color: #000;
-                margin-bottom: 10px;
-                font-size: 18px;
-            }
+    footer .footer-section h3 {
+        color: #000;
+        margin-bottom: 10px;
+        font-size: 18px;
+    }
 
-            footer .footer-section ul {
-                list-style: none;
-                padding: 0;
-            }
+    footer .footer-section ul {
+        list-style: none;
+        padding: 0;
+    }
 
-                footer .footer-section ul li {
-                    margin: 5px 0;
-                    font-size: 16px;
-                }
+    footer .footer-section ul li {
+        margin: 5px 0;
+        font-size: 16px;
+    }
 
-                    footer .footer-section ul li a {
-                        text-decoration: none;
-                        color: #333;
-                    }
+    footer .footer-section ul li a {
+        text-decoration: none;
+        color: #333;
+    }
 
     .app-links {
         display: flex;
@@ -1617,9 +1648,9 @@ footer .footer-section ul li a {
         gap: 10px;
     }
 
-        .app-links a img {
-            width: 30px;
-        }
+    .app-links a img {
+        width: 30px;
+    }
 
     .back-button {
         text-decoration: none;
@@ -1640,15 +1671,18 @@ footer .footer-section ul li a {
             justify-content: space-between;
         }
 
-            .search-bar input {
-                width: 80%;
-            }
+        .search-bar input {
+            width: 80%;
+        }
 
         .search-text {
             display: none;
         }
 
-        .separator1, .separator3, .separator2, .separator4 {
+        .separator1,
+        .separator3,
+        .separator2,
+        .separator4 {
             margin: 0.5cm;
         }
 
@@ -1656,7 +1690,9 @@ footer .footer-section ul li a {
             size: auto;
         }
 
-        .login-text, .location-button, .location-label {
+        .login-text,
+        .location-button,
+        .location-label {
             display: flex;
         }
     }
@@ -1674,15 +1710,18 @@ footer .footer-section ul li a {
             justify-content: space-between;
         }
 
-            .search-bar input {
-                width: 80%;
-            }
+        .search-bar input {
+            width: 80%;
+        }
 
         .search-text {
             display: none;
         }
 
-        .separator1, .separator3, .separator2, .separator4 {
+        .separator1,
+        .separator3,
+        .separator2,
+        .separator4 {
             margin: 0.5cm;
         }
 
@@ -1690,10 +1729,13 @@ footer .footer-section ul li a {
             size: auto;
         }
 
-        .login-text, .location-button, .location-label {
+        .login-text,
+        .location-button,
+        .location-label {
             display: flex;
         }
     }
+
     /* Detalles Pedido a Revisión de Ejecutivo */
 
     .detalles-pedido-general-container {
@@ -1702,27 +1744,27 @@ footer .footer-section ul li a {
         padding: 20px;
     }
 
-        .detalles-pedido-general-container h1 {
-            font-size: 36px;
-            margin: 20px 0;
-        }
+    .detalles-pedido-general-container h1 {
+        font-size: 36px;
+        margin: 20px 0;
+    }
 
-            .detalles-pedido-general-container h1 span {
-                color: #00b35f;
-            }
+    .detalles-pedido-general-container h1 span {
+        color: #00b35f;
+    }
 
-        .detalles-pedido-general-container label {
-            font-family: 'Nunito', sans-serif;
-            font-size: 3rem;
-            margin: 20px 0;
-        }
+    .detalles-pedido-general-container label {
+        font-family: 'Nunito', sans-serif;
+        font-size: 3rem;
+        margin: 20px 0;
+    }
 
-        .detalles-pedido-general-container input {
-            font-family: 'Nunito', sans-serif;
-            font-size: 1rem;
-            margin: 20px 0;
-            box-shadow: #000;
-        }
+    .detalles-pedido-general-container input {
+        font-family: 'Nunito', sans-serif;
+        font-size: 1rem;
+        margin: 20px 0;
+        box-shadow: #000;
+    }
 
     .detalles-pedido-container {
         background-color: white;
@@ -1734,22 +1776,22 @@ footer .footer-section ul li a {
         text-align: left;
     }
 
-        .detalles-pedido-container h2 {
-            color: #2D2D2D;
-            font-size: 24px;
-            margin-bottom: 10px;
-        }
+    .detalles-pedido-container h2 {
+        color: #2D2D2D;
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
 
-        .detalles-pedido-container p {
-            color: #000;
-            font-size: 18px;
-            margin: 5px 0;
-        }
+    .detalles-pedido-container p {
+        color: #000;
+        font-size: 18px;
+        margin: 5px 0;
+    }
 
-            .detalles-pedido-container p span {
-                color: #000;
-                font-weight: bold;
-            }
+    .detalles-pedido-container p span {
+        color: #000;
+        font-weight: bold;
+    }
 
     .buttons-ejecutivo-container {
         display: flex;
@@ -1801,30 +1843,30 @@ footer .footer-section ul li a {
         align-items: flex-start;
     }
 
-        footer .footer-section {
-            margin-bottom: 20px;
-        }
+    footer .footer-section {
+        margin-bottom: 20px;
+    }
 
-            footer .footer-section h3 {
-                color: #000;
-                margin-bottom: 10px;
-                font-size: 18px;
-            }
+    footer .footer-section h3 {
+        color: #000;
+        margin-bottom: 10px;
+        font-size: 18px;
+    }
 
-            footer .footer-section ul {
-                list-style: none;
-                padding: 0;
-            }
+    footer .footer-section ul {
+        list-style: none;
+        padding: 0;
+    }
 
-                footer .footer-section ul li {
-                    margin: 5px 0;
-                    font-size: 16px;
-                }
+    footer .footer-section ul li {
+        margin: 5px 0;
+        font-size: 16px;
+    }
 
-                    footer .footer-section ul li a {
-                        text-decoration: none;
-                        color: #333;
-                    }
+    footer .footer-section ul li a {
+        text-decoration: none;
+        color: #333;
+    }
 
     .app-links {
         display: flex;
@@ -1832,9 +1874,9 @@ footer .footer-section ul li a {
         gap: 10px;
     }
 
-        .app-links a img {
-            width: 30px;
-        }
+    .app-links a img {
+        width: 30px;
+    }
 
     /* Estilos responsivos */
     @media only screen and (min-width: 601px) {
@@ -1848,15 +1890,18 @@ footer .footer-section ul li a {
             justify-content: space-between;
         }
 
-            .search-bar input {
-                width: 80%;
-            }
+        .search-bar input {
+            width: 80%;
+        }
 
         .search-text {
             display: none;
         }
 
-        .separator1, .separator3, .separator2, .separator4 {
+        .separator1,
+        .separator3,
+        .separator2,
+        .separator4 {
             margin: 0.5cm;
         }
 
@@ -1864,7 +1909,9 @@ footer .footer-section ul li a {
             size: auto;
         }
 
-        .login-text, .location-button, .location-label {
+        .login-text,
+        .location-button,
+        .location-label {
             display: flex;
         }
     }
@@ -1888,15 +1935,16 @@ footer .footer-section ul li a {
             height: 0.8cm;
         }
 
-            .search-bar input {
-                width: 80%;
-            }
+        .search-bar input {
+            width: 80%;
+        }
 
         .search-text {
             display: none;
         }
 
-        .separator1, .separator3 {
+        .separator1,
+        .separator3 {
             margin: 0.2cm;
             border-left: 1px solid transparent;
         }
@@ -1905,7 +1953,11 @@ footer .footer-section ul li a {
             size: auto;
         }
 
-        .separator2, .login-text, .separator4, .boton-ubicacion, .location-label {
+        .separator2,
+        .login-text,
+        .separator4,
+        .boton-ubicacion,
+        .location-label {
             display: none;
         }
 
@@ -1936,15 +1988,18 @@ footer .footer-section ul li a {
             justify-content: space-between;
         }
 
-            .search-bar input {
-                width: 80%;
-            }
+        .search-bar input {
+            width: 80%;
+        }
 
         .search-text {
             display: none;
         }
 
-        .separator1, .separator3, .separator2, .separator4 {
+        .separator1,
+        .separator3,
+        .separator2,
+        .separator4 {
             margin: 1cm;
         }
 
@@ -1952,7 +2007,9 @@ footer .footer-section ul li a {
             size: auto;
         }
 
-        .login-text, .location-button, .location-label {
+        .login-text,
+        .location-button,
+        .location-label {
             display: flex;
         }
     }
