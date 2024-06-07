@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     searchIcon.addEventListener('click', function() {
 
-    });
+    }); 
 });
 
 document.addEventListener("DOMContentLoaded", function() {
