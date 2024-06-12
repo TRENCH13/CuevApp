@@ -1,38 +1,26 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const app = express();
-//const cors = require("cors");
+const path = require("path");
 require("dotenv").config({ path: "./.env" });
 
 // Settings
 const PORT = process.env.PORT || 3000;
-const corsOptions = {
-  origin: ["MBAPPES"],
-  methods: ["GET", "POST", "PUT", "PATCH", "DELETE"],
-  allowedHeaders: [
-    "Content-Type",
-    "Authorization",
-    "Origin",
-    "Access-Control-Allow-Origin",
-  ],
-};
 
 // Middleware para analizar las solicitudes con cuerpo JSON
 app.use(bodyParser.json());
 app.set("json spaces", 2);
 
-// CORS
-//app.use(cors(corsOptions));
-
-//Rutas WEB
-app.use(express.static("./"));
-app.use(require("./routes.js"));
+// Rutas
+app.use(express.static("./public"));
+app.use(require("./routes/routes.js"));
+app.use("/admin", require("./routes/adminRouter.js"));
+app.use("/executive", require("./routes/executiveRouter.js"));
+app.use("/deliveryman", require("./routes/deliverymanRouter.js"));
 
 // Endpoint WildCard
 app.all("*", (req, res) => {
-  res
-    .status(404)
-    .json({ error: true, message: "NO EXISTE EL RECURSO SOLICITADO" });
+  res.status(404).sendFile(path.join(__dirname, "./public/notfound.html"));
 });
 
 // Inicia el servidor

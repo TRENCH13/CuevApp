@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>CuevApp</title>
+        <link
+            href="https://fonts.googleapis.com/css?family=Lobster|Nunito:200&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="CSS/estilos.css" />
+        <link rel="stylesheet" href="CSS/menuStyle.css" />
+    </head>
+
+    <body>
+        <div class="background-image">
+            <div class="menu-bar">
+                <div class="menu-icon">
+                    <div class="barra">
+                        <h2 id="cuevapp-title">CuevApp</h2>
+                        <table>
+                            <tr>
+                                <td>
+                                    <button id="btn-ingresar">Ingresa</button>
+                                </td>
+                                <td>
+                                    <button id="btn-registrar">Registro</button>
+                                </td>
+                            </tr>
+                        </table>
+                        <h3>Secciones:</h3>
+                        <ul id="secciones">
+                            <li data-category="Linea Blanca">
+                                <a href="#">Linea Blanca</a>
+                            </li>
+                            <li data-category="Carniceria">
+                                <a href="#">Carniceria</a>
+                            </li>
+                            <li data-category="Frutas y Verduras">
+                                <a href="#">Frutas y Verduras</a>
+                            </li>
+                            <li data-category="Bebidas">
+                                <a href="#">Bebidas</a>
+                            </li>
+                            <li data-category="Despensa">
+                                <a href="#">Despensa</a>
+                            </li>
+                            <li data-category="Cuidado Personal">
+                                <a href="#">Cuidado Personal</a>
+                            </li>
+                            <li data-category="Mascotas">
+                                <a href="#">Mascotas</a>
+                            </li>
+                            <li id="ultimoelemento" data-category="Bebes">
+                                <a href="#">Bebes</a>
+                            </li>
+                        </ul>
+                        <h3>Otros:</h3>
+                        <ule>
+                            <listExt>
+                                <h4 href="Index.html">Quiero ser repartidor</h4>
+                            </listExt>
+                            <listExt>
+                                <h4 href="contacto.html">Conoce a CuevApp</h4>
+                            </listExt>
+                            <listExt id="ultimoelemento">
+                                <h4 href="contacto.html">
+                                    Términos y condiciones
+                                </h4>
+                            </listExt>
+                        </ule>
+                    </div>
+                </div>
+                <div class="cuevapp-title" id="cuevapp-title-header">
+                    CuevApp
+                </div>
+                <div class="separator1"></div>
+                <div class="boton-ubicacion">
+                    <div class="location" id="location-button">
+                        <img src="PNG/ubicacion.png" alt="Ubicación" />
+                        <span id="user-location">Obteniendo ubicación...</span>
+                    </div>
+                </div>
+                <div class="separator2"></div>
+                <div class="search-bar">
+                    <input
+                        type="text"
+                        placeholder="Busca cualquier producto ..."
+                    />
+                    <div class="search-icon">🔍</div>
+                </div>
+                <div class="separator3"></div>
+                <div class="dropdown">
+                    <div class="login-text" id="username-display">Ingresa</div>
+                    <div class="dropdown-content">
+                        <a href="/profile" id="ver-perfil">
+                            <img
+                                src="PNG/user.png"
+                                alt="Perfil"
+                                width="16"
+                                height="16"
+                            />
+                            Ver perfil
+                        </a>
+                        <a href="/pedidos" id="ver-pedidos">
+                            <img
+                                src="PNG/bolsa.png"
+                                alt="Pedidos"
+                                width="16"
+                                height="16"
+                            />
+                            Ver pedidos
+                        </a>
+                    </div>
+                </div>
+                <div class="separator4"></div>
+                <div class="cart-icon" id="cart-icon"></div>
+            </div>
+            <main>
+                <iframe name="paginas" src="/main" frameborder="0"></iframe>
+            </main>
+        </div>
+        <script src="JAVASCRIPT/logica.js"></script>
+        <script src="JAVASCRIPT/scripts.js"></script>
+    </body>
+</html>

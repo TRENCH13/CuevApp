@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 const botonModificar = document.createElement('button');
                 botonModificar.textContent = 'Modificar';
                 botonModificar.addEventListener('click', () => {
-                    window.location.href = `../carrito.html?id=${pedido.id}&productos=${encodeURIComponent(JSON.stringify(pedido.productos))}`;
+                    window.location.href = `/carrito?id=${pedido.id}&productos=${encodeURIComponent(JSON.stringify(pedido.productos))}`;
                 });
                 itemPedido.appendChild(botonModificar);
                 listaPendientes.appendChild(itemPedido);
@@ -49,7 +49,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 const botonModificarDireccion = document.createElement('button');
                 botonModificarDireccion.textContent = 'Modificar dirección';
                 botonModificarDireccion.addEventListener('click', () => {
-                    window.location.href = `../adress.html?id=${pedido.id}&direccion=${encodeURIComponent(pedido.direccion)}`;
+                    window.location.href = `/adress?id=${pedido.id}&direccion=${encodeURIComponent(pedido.direccion)}`;
                 });
                 itemPedido.appendChild(botonModificarDireccion);
                 listaEntrega.appendChild(itemPedido);

@@ -236,8 +236,3 @@ function getAddressSuggestions() {
         }
     });
 }
-
-
-
-
-
