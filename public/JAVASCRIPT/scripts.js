@@ -71,16 +71,16 @@ async function mostrarProductos() {
     contenedorProductos.innerHTML = ""; // Limpia el contenedor antes de añadir nuevos productos
     let fragment = document.createDocumentFragment();
 
-    console.log(productos)
+    console.log(productos);
 
     productos.forEach((producto) => {
         let div = document.createElement("div");
         div.classList.add("producto");
         div.innerHTML = `
-            <img src="${producto.fotografia}" alt="Imagen del producto">
+            <img src="data:image/jpeg;base64,${producto.fotografia}" alt="Imagen del producto">
             <h3>${producto.nombre}</h3>
             <p>$${producto.precio}</p>
-            <button onclick="verProducto(\"${producto.id}\")">Ver Producto</button>
+            <button onclick="verProducto(\'id:${producto.id.toString()}\')">Ver Producto</button>
         `;
         fragment.appendChild(div);
     });
@@ -240,6 +240,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // Función para obtener los detalles del producto por su ID
 function obtenerDetallesProducto(idProducto) {
+    idProducto = idProducto.split(":")[1];
     console.log(
         "obtenerDetallesProducto",
         productos.find((producto) => producto.id === idProducto),
@@ -271,7 +272,8 @@ function mostrarDetallesProducto() {
         productNameElement.textContent = productoSeleccionado.nombre;
     }
     if (productImageElement) {
-        productImageElement.src = productoSeleccionado.fotografia;
+        productImageElement.src =
+            "data:image/jpeg;base64," + productoSeleccionado.fotografia;
     }
     if (productPriceElement) {
         productPriceElement.textContent = `$${productoSeleccionado.precio}`;
