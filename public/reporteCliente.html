@@ -1,28 +1,98 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Reporte de Pedido</title>
+        <link
+            href="https://fonts.googleapis.com/css?family=Lobster|Nunito:200&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="CSS/estilos.css" />
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const botonReporte = document.getElementById(
+                    "guardar-reporte-usuario-button",
+                );
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reporte de Pedido</title>
-    <link href="https://fonts.googleapis.com/css?family=Lobster|Nunito:200&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="CSS/estilos.css">
-    <script src="../JAVASCRIPT/scripts.js"></script>
-</head>
+                botonReporte.addEventListener("click", function () {
+                    reportar();
+                });
+            });
 
-<body>
-    <div>
-        <h1>Reporte de Pedido</h1>
-        <form>
-            <label for="motivo">Motivo</label>
-            <input type="text" id="motivo" name="motivo">
-            <br>
-            <label for="contenido">Contenido</label>
-            <input type="text" id="contenido" name="contenido">
-            <br>
-            <button id="guardar-reporte-usuario-button" class="button button-primary">Mandar Reporte</button>
-        </form>
-    </div>
-</body>
+            function guardarReporte() {
+                console.log("Entra peticion");
+                const myHeaders = new Headers();
+                myHeaders.append("Access-Control-Allow-Origin", "MBAPPES");
+                myHeaders.append("Content-Type", "application/json");
+                myHeaders.append(
+                    "Authorization",
+                    "Bearer " +
+                        document.cookie
+                            .split("; ")
+                            .find((row) => row.startsWith("token="))
+                            ?.split("=")[1],
+                );
 
+                const raw = JSON.stringify({
+                    idPedido: localStorage.getItem("pedidoAReportarID"),
+                    titulo: document.getElementById("motivo").value,
+                    descripcion: document.getElementById("contenido").value,
+                });
+
+                const requestOptions = {
+                    method: "POST",
+                    headers: myHeaders,
+                    body: raw,
+                    redirect: "follow",
+                };
+
+                return fetch(
+                    "https://973f29df-328d-4bcf-80f4-60c18a7bfd7a-00-2z1u5ktbg8j3k.riker.replit.dev/api/user/problemasdepedido",
+                    requestOptions,
+                )
+                    .then((response) => {return response.json()})
+                    .then((result) => {
+                        if (result.error === false) {
+                            alert("Reporte realizado con éxito");
+                        } else {
+                            alert("No se pudo realizar el reporte");
+                        }
+                        console.log(result);
+                        return "";
+                    })
+                    .catch((error) => {console.error(error) return error;});
+            }
+            async function reportar() {
+                const raw = JSON.stringify({
+                    idPedido: localStorage.getItem("pedidoAReportarID"),
+                    titulo: document.getElementById("motivo").value,
+                    descripcion: document.getElementById("contenido").value,
+                });
+                console.log("RAW", raw);
+                await guardarReporte();
+                console.log("RAW2", raw);
+            }
+        </script>
+    </head>
+
+    <body>
+        <div>
+            <h1>Reporte de Pedido</h1>
+            <form>
+                <label for="motivo">Motivo</label>
+                <input type="text" id="motivo" name="motivo" />
+                <br />
+                <label for="contenido">Contenido</label>
+                <input type="text" id="contenido" name="contenido" />
+                <br />
+                <button
+                    id="guardar-reporte-usuario-button"
+                    class="button button-primary"
+                >
+                    Mandar Reporte
+                </button>
+            </form>
+        </div>
+    </body>
 </html>

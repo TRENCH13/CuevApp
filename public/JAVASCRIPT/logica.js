@@ -105,6 +105,45 @@ function getCategorias() {
         .catch((error) => console.error("Error:", error));
 }
 
+// Función para borrar todas las cookies
+function clearCookies() {
+    const cookies = document.cookie.split("; ");
+    cookies.forEach((cookie) => {
+        const eqPos = cookie.indexOf("=");
+        const name = eqPos > -1 ? cookie.substr(0, eqPos) : cookie;
+        // Borra la cookie en el dominio actual y en todos los subdominios
+        document.cookie =
+            name + "=;expires=Thu, 01 Jan 1970 00:00:00 GMT;path=/";
+        document.cookie =
+            name +
+            "=;expires=Thu, 01 Jan 1970 00:00:00 GMT;path=/;domain=" +
+            window.location.hostname;
+    });
+    console.log("Cookies borradas.");
+}
+
+// Función para borrar el caché
+async function clearCache() {
+    if ("caches" in window) {
+        const cacheNames = await caches.keys();
+        for (const cacheName of cacheNames) {
+            await caches.delete(cacheName);
+        }
+        console.log("Caché borrado.");
+    } else {
+        console.log("La API de caché no es compatible con este navegador.");
+    }
+}
+
+async function clearCookiesAndCache() {
+    clearCookies();
+    await clearCache();
+    // Recargar la página después de un pequeño retraso para asegurarse de que se borren las cookies y el caché
+    setTimeout(() => {
+        window.location.reload();
+    }, 500);
+}
+
 document.addEventListener("DOMContentLoaded", function () {
     // Simulación de obtener el nombre de usuario desde la base de datos
 
@@ -155,6 +194,7 @@ document.addEventListener("DOMContentLoaded", function () {
     var verPerfil = document.getElementById("ver-perfil");
     var verPedidos = document.getElementById("ver-pedidos");
     var cartIcon = document.getElementById("cart-icon");
+    var cerrarSesion = document.getElementById("cerrarSesion");
     var secciones = document
         .getElementById("secciones")
         .getElementsByTagName("li");
@@ -163,6 +203,13 @@ document.addEventListener("DOMContentLoaded", function () {
     function cambiarIframe(src) {
         iframe.src = src;
     }
+
+    cerrarSesion.addEventListener("click", function () {
+        console.log("saliendo...");
+        // Llamar a las funciones para borrar cookies y caché
+        clearCookiesAndCache();
+        cambiarIframe("../main.html");
+    });
 
     // Evento de clic para la ubicación
     locationButton.addEventListener("click", function () {

@@ -19,11 +19,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const myHeaders = new Headers();
         myHeaders.append("Access-Control-Allow-Origin", "MBAPPES");
         myHeaders.append("Content-Type", "application/json");
-        myHeaders.append(
-            "Authorization",
-            "Bearer " +
-                "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7InVzZXJuYW1lIjoiam9obl9kb2UifSwiaWF0IjoxNzE4Mjg3MzI0LCJleHAiOjE3MTgzNzM3MjR9.w6aopLe1SrmISW-S1CUm7aAUINmPocPSpWCWL1dGcTA",
-        );
+        myHeaders.append("Authorization", "Bearer " + token);
 
         const requestOptions = {
             method: "GET",
@@ -111,10 +107,10 @@ document.addEventListener("DOMContentLoaded", function () {
                 listaEntrega.appendChild(itemPedido);
             } else if (pedido.estado === "enviado") {
                 const botonComprarDeNuevo = document.createElement("button");
-                botonComprarDeNuevo.textContent = "Comprar de nuevo";
+                botonComprarDeNuevo.textContent = "Reportar problema";
                 botonCancelar.style.display = "none";
                 botonComprarDeNuevo.addEventListener("click", () => {
-                    comprarDeNuevo(pedido);
+                    reportarProblema(pedido);
                 });
                 itemPedido.appendChild(botonComprarDeNuevo);
                 listaEnviados.appendChild(itemPedido);
@@ -149,11 +145,7 @@ document.addEventListener("DOMContentLoaded", function () {
         pedido.estado = "cancelado";
         const myHeaders = new Headers();
         myHeaders.append("Content-Type", "application/json");
-        myHeaders.append(
-            "Authorization",
-            "Bearer " +
-                "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7InVzZXJuYW1lIjoiam9obl9kb2UifSwiaWF0IjoxNzE4Mjg3MzI0LCJleHAiOjE3MTgzNzM3MjR9.w6aopLe1SrmISW-S1CUm7aAUINmPocPSpWCWL1dGcTA",
-        );
+        myHeaders.append("Authorization", "Bearer " + token);
 
         const raw = JSON.stringify({
             idPedido: pedido.id,
@@ -192,6 +184,12 @@ document.addEventListener("DOMContentLoaded", function () {
         };
         pedidos.push(nuevoPedido);
         renderizarPedidos();
+    }
+
+    function reportarProblema(pedido) {
+        localStorage.setItem("pedidoAReportarID", pedido.id);
+        console.log(localStorage.getItem("pedidoAReportarID"));
+        window.location.href = "../reporteCliente.html";
     }
 
     // Renderizar los pedidos al cargar la página

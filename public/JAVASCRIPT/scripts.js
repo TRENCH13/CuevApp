@@ -547,13 +547,14 @@ function removeFromCart(productId, cantidadProducto) {
 }
 
 function mostrarModalPago(total) {
-    var modal = document.getElementById("payment-modal");
+    /*var modal = document.getElementById("payment-modal");
     var paymentAmountElement = document.getElementById("payment-amount");
 
     // Actualizar el texto del total a pagar en el modal
     paymentAmountElement.innerText = "Para pagar: $" + total;
 
-    modal.style.display = "block";
+    modal.style.display = "block";*/
+    window.location.href = "../thanks.html";
 }
 
 document.addEventListener("DOMContentLoaded", function () {
