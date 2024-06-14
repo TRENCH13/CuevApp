@@ -75,7 +75,7 @@ document.addEventListener("DOMContentLoaded", function () {
             myHeaders.append("Authorization", "Basic TUJBUFBFUzpNQkFQUEVT");
 
             const raw = JSON.stringify({
-                User: telefono,
+                User: telefono.toString(),
                 Password: password,
                 Nombres: nombres,
                 ApellidoPaterno: apellidoPaterno,

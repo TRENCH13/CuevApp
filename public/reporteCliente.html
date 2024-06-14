@@ -51,7 +51,9 @@
                     "https://973f29df-328d-4bcf-80f4-60c18a7bfd7a-00-2z1u5ktbg8j3k.riker.replit.dev/api/user/problemasdepedido",
                     requestOptions,
                 )
-                    .then((response) => {return response.json()})
+                    .then((response) => {
+                        return response.json();
+                    })
                     .then((result) => {
                         if (result.error === false) {
                             alert("Reporte realizado con éxito");
@@ -61,7 +63,10 @@
                         console.log(result);
                         return "";
                     })
-                    .catch((error) => {console.error(error) return error;});
+                    .catch((error) => {
+                        console.error(error);
+                        return error;
+                    });
             }
             async function reportar() {
                 const raw = JSON.stringify({
