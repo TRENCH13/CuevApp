@@ -1,79 +1,92 @@
-document.addEventListener('DOMContentLoaded', () => {
-    // Función para obtener los datos de perfil (simulada con datos estáticos)
-    function getProfileData() {
-        return {
-            username: "usuario123",
-            email: "usuario@example.com",
-            phone: "1234567890",
-            profilePicture: "../PNG/profile.png"
-        };
-    }
+const userNombre = document.cookie
+    .split("; ")
+    .find((row) => row.startsWith("name="))
+    ?.split("=")[1];
 
+const userApellidoPaterno = document.cookie
+    .split("; ")
+    .find((row) => row.startsWith("apellidoPaterno="))
+    ?.split("=")[1];
+
+const userApellidoMaterno = document.cookie
+    .split("; ")
+    .find((row) => row.startsWith("apellidoMaterno="))
+    ?.split("=")[1];
+
+const userTelefono = document.cookie
+    .split("; ")
+    .find((row) => row.startsWith("telefono="))
+    ?.split("=")[1];
+
+document.addEventListener("DOMContentLoaded", () => {
     // Cargar los datos de perfil al cargar la página
-    const profileData = getProfileData();
-    document.getElementById('username').value = profileData.username;
-    document.getElementById('email').value = profileData.email;
-    document.getElementById('phone').value = profileData.phone;
-    document.getElementById('profile-picture').src = profileData.profilePicture;
+    document.getElementById("username").value = userNombre || "";
+    document.getElementById("apellidoPaterno").value =
+        userApellidoPaterno || "";
+    document.getElementById("apellidoMaterno").value =
+        userApellidoMaterno || "";
+    document.getElementById("phone").value = userTelefono || "";
 
     // Manejar el formulario de actualización de perfil
-    const profileForm = document.getElementById('profile-form');
-    const updateButton = document.getElementById('update-button');
-    const showPasswordButton = document.getElementById('show-password-form');
-    const passwordForm = document.getElementById('password-form');
-    const passwordButton = document.getElementById('password-button');
+    const profileForm = document.getElementById("profile-form");
+    const updateButton = document.getElementById("update-button");
+    const regresarButton = document.getElementById("regresar-button");
+    const showPasswordButton = document.getElementById("show-password-form");
+    const passwordForm = document.getElementById("password-form");
+
+    regresarButton.addEventListener("click", () => {
+        window.location.href = "../main.html";
+    });
 
     let isProfileFormDirty = false;
     let isPasswordFormVisible = false;
 
-    function toggleUpdateButtonVisibility() {
-        updateButton.style.display = isProfileFormDirty ? 'block' : 'none';
-    }
-
-    function togglePasswordFormVisibility() {
-        passwordForm.style.display = isPasswordFormVisible ? 'block' : 'none';
-    }
-
-    profileForm.addEventListener('input', () => {
+    profileForm.addEventListener("input", () => {
         isProfileFormDirty = true;
         toggleUpdateButtonVisibility();
     });
 
-    showPasswordButton.addEventListener('click', () => {
+    showPasswordButton.addEventListener("click", () => {
         isPasswordFormVisible = !isPasswordFormVisible;
         togglePasswordFormVisibility();
-        showPasswordButton.textContent = isPasswordFormVisible ? 'Ocultar Contraseña' : 'Mostrar Contraseña';
+        showPasswordButton.textContent = isPasswordFormVisible
+            ? "Ocultar Contraseña"
+            : "Mostrar Contraseña";
     });
 
-    // Manejar el formulario de actualización de perfil
-    profileForm.addEventListener('submit', (event) => {
+    profileForm.addEventListener("submit", (event) => {
         event.preventDefault();
-        const username = document.getElementById('username').value;
-        const email = document.getElementById('email').value;
-        const phone = document.getElementById('phone').value;
+        const username = document.getElementById("username").value;
+        const email = document.getElementById("email").value;
+        const phone = document.getElementById("phone").value;
 
-        // Aquí agregarías la lógica para actualizar el perfil del usuario
         console.log(`Actualizar perfil: ${username}, ${email}, ${phone}`);
-        alert('Perfil actualizado correctamente');
+        alert("Perfil actualizado correctamente");
         isProfileFormDirty = false;
         toggleUpdateButtonVisibility();
     });
 
-   // Manejar el formulario de cambio de contraseña
-   passwordForm.addEventListener('submit', (event) => {
-    event.preventDefault();
-    const newPassword = document.getElementById('new-password').value;
-    const confirmPassword = document.getElementById('confirm-password').value;
+    passwordForm.addEventListener("submit", (event) => {
+        event.preventDefault();
+        const newPassword = document.getElementById("new-password").value;
+        const confirmPassword =
+            document.getElementById("confirm-password").value;
 
-    if (newPassword === confirmPassword) {
-        // Aquí agregarías la lógica para cambiar la contraseña del usuario
-        console.log(`Cambiar contraseña a: ${newPassword}`);
-        alert('Contraseña cambiada correctamente');
-        isPasswordFormVisible = false;
-        togglePasswordFormVisibility();
-    } else {
-        alert('Las contraseñas no coinciden');
+        if (newPassword === confirmPassword) {
+            console.log(`Cambiar contraseña a: ${newPassword}`);
+            alert("Contraseña cambiada correctamente");
+            isPasswordFormVisible = false;
+            togglePasswordFormVisibility();
+        } else {
+            alert("Las contraseñas no coinciden");
+        }
+    });
+
+    function toggleUpdateButtonVisibility() {
+        updateButton.style.display = isProfileFormDirty ? "block" : "none";
     }
-});;
-});
 
+    function togglePasswordFormVisibility() {
+        passwordForm.style.display = isPasswordFormVisible ? "block" : "none";
+    }
+});

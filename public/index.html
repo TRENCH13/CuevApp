@@ -29,32 +29,7 @@
                             </tr>
                         </table>
                         <h3>Secciones:</h3>
-                        <ul id="secciones">
-                            <li data-category="Linea Blanca">
-                                <a href="#">Linea Blanca</a>
-                            </li>
-                            <li data-category="Carniceria">
-                                <a href="#">Carniceria</a>
-                            </li>
-                            <li data-category="Frutas y Verduras">
-                                <a href="#">Frutas y Verduras</a>
-                            </li>
-                            <li data-category="Bebidas">
-                                <a href="#">Bebidas</a>
-                            </li>
-                            <li data-category="Despensa">
-                                <a href="#">Despensa</a>
-                            </li>
-                            <li data-category="Cuidado Personal">
-                                <a href="#">Cuidado Personal</a>
-                            </li>
-                            <li data-category="Mascotas">
-                                <a href="#">Mascotas</a>
-                            </li>
-                            <li id="ultimoelemento" data-category="Bebes">
-                                <a href="#">Bebes</a>
-                            </li>
-                        </ul>
+                        <ul id="secciones" class="secciones-lateral"></ul>
                         <h3>Otros:</h3>
                         <ule>
                             <listExt>
@@ -86,6 +61,7 @@
                     <input
                         type="text"
                         placeholder="Busca cualquier producto ..."
+                        id="buscar"
                     />
                     <div class="search-icon">🔍</div>
                 </div>
@@ -93,7 +69,7 @@
                 <div class="dropdown">
                     <div class="login-text" id="username-display">Ingresa</div>
                     <div class="dropdown-content">
-                        <a href="/profile" id="ver-perfil">
+                        <a href="#" id="ver-perfil">
                             <img
                                 src="PNG/user.png"
                                 alt="Perfil"
@@ -102,7 +78,7 @@
                             />
                             Ver perfil
                         </a>
-                        <a href="/pedidos" id="ver-pedidos">
+                        <a href="#" id="ver-pedidos">
                             <img
                                 src="PNG/bolsa.png"
                                 alt="Pedidos"
@@ -117,10 +93,10 @@
                 <div class="cart-icon" id="cart-icon"></div>
             </div>
             <main>
-                <iframe name="paginas" src="/main" frameborder="0"></iframe>
+                <iframe name="paginas" src="main.html" frameborder="0"></iframe>
             </main>
         </div>
-        <script src="JAVASCRIPT/logica.js"></script>
         <script src="JAVASCRIPT/scripts.js"></script>
+        <script src="JAVASCRIPT/logica.js"></script>
     </body>
 </html>

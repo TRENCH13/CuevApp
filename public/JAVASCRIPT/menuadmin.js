@@ -3,7 +3,13 @@ const token = document.cookie
     .find((row) => row.startsWith("token="))
     ?.split("=")[1];
 
+const userNombre = document.cookie
+.split("; ")
+.find((row) => row.startsWith("name="))
+?.split("=")[1];
+
 document.addEventListener("DOMContentLoaded", function () {
+    document.getElementById('username').value = userNombre;
     const fragmentContainer = document.getElementById("fragment-container");
     const buttons = document.querySelectorAll(
         ".action-admin-button-usuario, .action-admin-button-sucursal, .action-admin-button-producto",

@@ -5,13 +5,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (continuarButton) {
         continuarButton.addEventListener("click", function () {
-            window.location.href = "/registro";
+            window.location.href = "../registro.html";
         });
     }
 
     if (tengoCuentaButton) {
         tengoCuentaButton.addEventListener("click", function () {
-            window.location.href = "/iniciosesion";
+            window.location.href = "../iniciosesion.html";
         });
     }
 
@@ -108,7 +108,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 })
                 .then((result) => {
                     console.log("Exito en la operación:", result);
-                    window.location.href = "/main";
+                    window.location.href = "../main.html";
                 })
                 .catch((error) => {
                     console.error("Hubo un problema con el fetchva:", error);

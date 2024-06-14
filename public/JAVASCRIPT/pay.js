@@ -27,7 +27,7 @@ function initiateCheckout() {
                 "BASIC OTBlYWMwMDMtNDFlOS00MWZhLTkzMzQtMjhlM2VhNDA1YjViOjY1OGY0NmVjLTBkNGItNDkyMi05NTJjLWMyZGExZDc4NDhhYQ==",
         },
         body: JSON.stringify({
-            amount: 0.1,
+            amount: totalAmount,
             currency: "MXN",
             purchase_description: "Compra en CuevApp",
             redirection_url: {

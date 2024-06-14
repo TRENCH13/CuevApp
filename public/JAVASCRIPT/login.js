@@ -31,27 +31,29 @@ document.addEventListener("DOMContentLoaded", function () {
       })
       .then((data) => {
         document.cookie = `token=${data.token}; path=/`;
-        document.cookie = `username=${data.user.username}; path=/`;
-        document.cookie = `name=${data.user.name}; path=/`;
+        document.cookie = `name=${data.user.Nombres}; path=/`;
+        document.cookie = `apellidoPaterno=${data.user.ApellidoPaterno}; path=/`;
+        document.cookie = `apellidoMaterno=${data.user.ApellidoMaterno}; path=/`;
+        document.cookie = `telefono=${data.user.Telefono}; path=/`;
         document.cookie = `tipoUsuario=${data.user.TipoUsuario}; path=/`;
         document.cookie = `idCliente=${data.user.IDCliente}; path=/`;
 
+        console.log(document.cookie);
+
         if (data.user.TipoUsuario === "administrador") {
-          window.location.href = "/admin/menu";
+          window.location.href = "../Administrador/menuadmin.html";
         } else if (data.user.TipoUsuario === "ejecutivo") {
           window.location.href = "/executive/menu";
-        } else if (data.user.TipoUsuario === "null") {
-          window.location.href = "/main";
+        } else if (data.user.TipoUsuario === "NULL") {
+          window.location.href = "../main.html";
         } else {
-          window.location.href = "/main"; // Página por defecto
+          window.location.href = "../main.html"; // Página por defecto
           window.parent.location.reload(); // Recargar la página
         }
       })
       .catch((error) => {
         console.error("Error en el inicio de sesión:", error);
-        window.location.href = "/ingreso";
+        window.location.href = "../ingreso.html";
       });
   });
 });
-
-
